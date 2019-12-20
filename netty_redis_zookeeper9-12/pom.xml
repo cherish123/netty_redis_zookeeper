@@ -34,7 +34,7 @@
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <commons-collections4.version>4.1</commons-collections4.version>
 
-        <netty.version>4.1.43.Final</netty.version>
+        <netty.version>4.1.44.Final</netty.version>
         <protobuf.version>3.7.1</protobuf.version>
         <fastjson.version>1.2.29</fastjson.version>
         <guava.version>17.0</guava.version>
