@@ -1,5 +1,7 @@
 package com.crazymakercircle.netty.imooc;
 
+import com.crazymakercircle.netty.imooc.encoder.BizHandler;
+import com.crazymakercircle.netty.imooc.encoder.Encoder;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -24,7 +26,9 @@ public class Server {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
-//                            ch.pipeline().addLast();
+                            ch.pipeline().addLast(new Encoder())
+                                    .addLast(new BizHandler());
+
                         }
                     });
 
